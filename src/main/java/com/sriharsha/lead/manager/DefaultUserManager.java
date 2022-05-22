@@ -7,10 +7,7 @@ import com.sriharsha.lead.model.Lead;
 import com.sriharsha.lead.model.User;
 import org.springframework.stereotype.Service;
 
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class DefaultUserManager implements UserManager{
@@ -41,7 +38,7 @@ public class DefaultUserManager implements UserManager{
         User user = new User();
         try {
             user.setId(id);
-            user.setLeads(Set.of());
+            user.setLeads(Collections.emptySet());
             user.setWebhook(UUID.randomUUID().toString());
             userRepository.save(user);
         } catch (Exception e) {
