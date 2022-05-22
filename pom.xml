@@ -51,25 +51,8 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<executions>
-					<execution>
-						<configuration>
-							<archive>
-								<manifest>
-									<mainClass>com.sriharsha.lead.LeadApplication</mainClass>
-								</manifest>
-							</archive>
-							<additionalProperties>
-								<encoding.source>${project.build.sourceEncoding}</encoding.source>
-								<encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
-								<java.source>1.8</java.source>
-								<java.target>1.8</java.target>
-							</additionalProperties>
-						</configuration>
-					</execution>
-				</executions>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
