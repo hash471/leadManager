@@ -55,10 +55,12 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<executions>
 					<execution>
-						<goals>
-							<goal>build-info</goal>
-						</goals>
 						<configuration>
+							<archive>
+								<manifest>
+									<mainClass>com.sriharsha.lead.LeadApplication</mainClass>
+								</manifest>
+							</archive>
 							<additionalProperties>
 								<encoding.source>${project.build.sourceEncoding}</encoding.source>
 								<encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
